@@ -1,0 +1,60 @@
+{% load static %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful</title>
+    <link href="{% static 'style_success.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>@Artisan Café</h1>
+    </div>
+
+    <!-- Receipt Container -->
+    <div class="receipt-container">
+        <h2>Order Successfully Placed!</h2>
+        <p>Your order has been placed successfully. Thank you for shopping with us!</p>
+
+        <!-- Receipt Details -->
+        <div class="receipt-details">
+            <h3>Receipt</h3>
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.unit_price }}</td>
+                        <td>${{ item.quantity|multiply:item.unit_price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="total-label">Total:</td>
+                        <td class="total-value">${{ total_price }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+            <button onclick="window.print()">Print Receipt</button>
+            <a href="{% url 'home' %}" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

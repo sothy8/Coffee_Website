@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    background-color: #3b141c; /* Deep Brown */
+    color: #FFFFFF; /* White text for readability */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    color: #FFFFFF; /* White */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Subtle shadow for prominence */
+}
+
+/* Receipt Container */
+.receipt-container {
+    background-color: #F5E2C8; /* Neutral Cream for contrast */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    max-width: 700px;
+    width: 90%;
+    text-align: left; /* Align content for professionalism */
+}
+
+/* Receipt Title */
+.receipt-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b141c; /* Deep Brown */
+    margin-bottom: 10px;
+}
+
+/* Receipt Details */
+.receipt-details {
+    margin-top: 20px;
+}
+
+.receipt-details p {
+    margin: 8px 0;
+    color: #4a1c2b; /* Darker Brown */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.receipt-details .total {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: #3b141c; /* Deep Brown */
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Button Styling */
+button, a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #f3961c; /* Warm Yellow */
+    color: #FFF5E1; /* Light Cream */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline for links */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+button:hover, a:hover {
+    background-color: #ffb555; /* Slightly lighter Yellow */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    color: #FFF5E1; /* Light Cream */
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.8; /* Slight transparency for a softer look */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .receipt-container {
+        padding: 20px;
+    }
+
+    button, a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    background-color: #3b141c; /* Deep Brown */
+    color: #FFFFFF; /* White text for readability */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    color: #f3961c;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Form Styling */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f3961c; /* Light Tan */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Container */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Grid Item */
+.menu-item {
+    background-color: #4a1c2b; /* Lighter Brown */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image Styling */
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Styling */
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #FFF5E1;
+}
+
+.menu-item p {
+    margin: 5px 0;
+    color: #FFF5E1;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.input-container label {
+    margin-right: 10px;
+    color: #FFF5E1;
+}
+
+.menu-item input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #6B3F2E;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.menu-item input[type="number"]:focus {
+    outline: none;
+    border-color: #8B5E3C;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3b141c;
+    color: #FFF5E1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #8B5E3C; /* Slightly lighter brown on hover */
+}
